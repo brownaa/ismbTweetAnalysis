@@ -3,9 +3,11 @@ Type: Package
 Title: Analyzes two ISMB tweet datasets
 Version: 0.1
 Date: 2014-08-01
-Authors: "Aaron Brown <Aaron.Brown@dnvgl.com> [aut, cre]"
+Authors@R: "Aaron Brown <Aaron.Brown@dnvgl.com> [aut, cre]"
 Maintainer: Aaron Brown <Aaron.Brown@dnvgl.com>
 Description: Reports the analysis of two ISMB tweet datasets
+Depends:
+    R(>= 3.1.1)
 License: CCO
 LazyData: true
 VignetteBuilder: knitr

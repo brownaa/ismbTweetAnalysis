@@ -1,12 +1,12 @@
 {
-    "contents" : "<!--\n%\\VignetteEngine{knitr}\n%\\VignetteIndexEntry{ISMB Twitter Analysis}\n-->\n\n# ISMB Twitter Analysis\n\nThe goal of this work is to analyze two different collections of archived tweets from the ISMB conferences from 2012 and 2014, and compare and contrast them. The collections of tweets are from Neil Saunders ([his initial analysis](http://nsaunders.wordpress.com/2012/08/16/twitter-coverage-of-the-ismb-2012-meeting-some-statistics/) and [data](https://github.com/neilfws/Twitter/tree/master/ismb/data)) and Stephen Turner ([initial analysis](http://gettinggeneticsdone.blogspot.com/2013/05/automated-analysis-tweets-bioinformatics-twitterchive.html) and [data](https://github.com/stephenturner/twitterchive)).\n\nBefore we start to use this data, we will do some munging on it so that both data-sets are comparable and we can apply the same functions to them for comparison.",
+    "contents" : "<!--\n%\\VignetteEngine{knitr}\n%\\VignetteIndexEntry{ISMB Twitter Analysis}\n-->\n\n# ISMB Twitter Analysis\n\nThe goal of this work is to analyze two different collections of archived tweets from the ISMB conferences from 2012 and 2014, and compare and contrast them. The collections of tweets are from Neil Saunders ([his initial analysis](http://nsaunders.wordpress.com/2012/08/16/twitter-coverage-of-the-ismb-2012-meeting-some-statistics/) and [data](https://github.com/neilfws/Twitter/tree/master/ismb/data)) and Stephen Turner ([initial analysis](http://gettinggeneticsdone.blogspot.com/2013/05/automated-analysis-tweets-bioinformatics-twitterchive.html) and [data](https://github.com/stephenturner/twitterchive)).\n\nBefore we start to use this data, we will do some munging on it so that both data-sets are comparable and we can apply the same functions to them for comparison.\n\n```{r datamunging}\nbaseLoc <- system.file(package=\"ismbTweetAnalysis\")\nbaseLoc <- getwd()    # comment out once package is built and installed\nextPath <- file.path(baseLoc, \"inst/extdata\")\n```\n\n```{r data2012, eval=FALSE}\nload(file.path(extPath, \"ismb2012.RData\"))\nismb <- ismb[, c(\"text\", \"created\", \"id\", \"screenName\")]\nismb$screenName <- paste(\"@\", ismb$screenName, sep=\"\")\nsave(ismb, file=paste0(baseLoc, \"/data/ismb2012.RData\"))\n```\n",
     "created" : 1407326091904.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2138612809",
+    "hash" : "2248788880",
     "id" : "D7E80E07",
-    "lastKnownWriteTime" : 1407326361,
+    "lastKnownWriteTime" : 1407359030,
     "path" : "~/R/projects/personal/ismbTweetAnalysis/vignettes/ismb_analysis.Rmd",
     "project_path" : "vignettes/ismb_analysis.Rmd",
     "properties" : {
