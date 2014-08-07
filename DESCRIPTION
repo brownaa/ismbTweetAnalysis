@@ -8,6 +8,9 @@ Maintainer: Aaron Brown <Aaron.Brown@dnvgl.com>
 Description: Reports the analysis of two ISMB tweet datasets
 Depends:
     R(>= 3.1.1)
+Imports:
+    tm,
+    stringr
 License: CCO
 LazyData: true
 VignetteBuilder: knitr
